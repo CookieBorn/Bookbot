@@ -5,8 +5,13 @@ def main():
     return file_contents
 file_contents=main()
 def wordcount():
-    words=file_contents.split()
+    words=(file_contents.casefold()).split()
     number=len(words)
-    return number
+    return number, words
 words=wordcount()
 print(words)
+def lettercount():
+    v=file_contents.count("v")
+    return v
+letters=lettercount()
+print(letters)
