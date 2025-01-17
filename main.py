@@ -1,4 +1,6 @@
-from turtledemo.nim import main
-__name__=='__main__'
-with open('books/frankenstein.txt') as f:
-    file_contents = f.read()
+def main():
+    with open('books/frankenstein.txt') as f:
+        file_contents = f.read()
+    return file_contents
+file_contents=main()
+print(file_contents)
