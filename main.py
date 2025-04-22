@@ -4,11 +4,11 @@ import sys
 def main():
     if len(sys.argv)<2:
         print("Usage: python3 main.py <path_to_book>")
-        sys.exit(1)
+        path="books/frankenstein.txt"
     else:
         path=sys.argv[1]
     with open(path) as f:
-        print(f"Begin report of {f.name}")
+        print(f"--- Begin report of {f.name} ---")
         file_contents = f.read()
     return file_contents
 file_contents=main()
@@ -31,4 +31,4 @@ def report():
         print(a)
     return
 reports=report()
-print("End of Report")
+print("--- End report ---")
